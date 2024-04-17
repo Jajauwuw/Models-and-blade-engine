@@ -19,10 +19,10 @@ class BookFactory extends Factory
     {
         return [
             'isbn' => $this->faker->isbn13,
-            'title' => $this->faker->sentence(4),
-            'author' => $this->faker->name,
-            'description' => $this->faker->paragraph(3),
-            'date_published' => $this->faker->date, 
+            'title' => fake()->sentence,
+            'author' => fake()->name,
+            'description' => fake()->paragraph,
+            'date_published' => fake()->date(),
         ];
     }
 }
